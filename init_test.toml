@@ -1,0 +1,4 @@
+environment = "test"
+
+[pinger]
+addr = ":8023"

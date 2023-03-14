@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  pinger:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    command: bash -c "${entrypoint}"
+    expose:
+      - 8023
+    ports:
+      - 8023:${PINGER_LOCAL_PORT}
+    volumes:
+      - "${PWD}:/work/project/pinger"
